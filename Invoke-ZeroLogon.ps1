@@ -1,5 +1,6 @@
 
-function Invoke-Zerol{
+function Invoke-0logon{
+
 [CmdletBinding()]
 Param(
     [Parameter(Position = 1, Mandatory = $true)]
