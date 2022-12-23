@@ -1,33 +1,5 @@
-function Invoke-Zerologon{
-<#
-.SYNOPSIS
 
-This script can be run in two modes currently.
-1. When the reset parameter is set to True, the script will attempt to reset the target computer’s password to the default NTLM hash (essentially an empty password).
-2. By default, reset is set to false and will simply scan if the target computer is vulnerable to the ZeroLogon exploit (CVE-2020-1472).
-WARNING: Resetting the password of a Domain Controller is likely to break the network. DO NOT use the reset parameter against a production system unless you fully understand the risks and have explicit permission.
-
-
-
-This code was heavily adapted from the C# implementation by the NCC Group's Full Spectrum Attack Simulation team
-https://github.com/nccgroup/nccfsas/tree/main/Tools/SharpZeroLogon
-
-The original CVE was published by Secura
-https://www.secura.com/blog/zero-logon
-
-Author: Hubbl3, Twitter: @Hubbl3
-License: BSD 3-Clause
-Required Dependencies: None
-Optional Dependencies: None
-Version: .1
-
-.Parameter FQDN
-Provide the fully qualified domain name
-
-.Parameter Reset
-Boolean used to determine if the script should attempt to reset the target computer's password
-
-#>
+function Invoke-Zerol{
 [CmdletBinding()]
 Param(
     [Parameter(Position = 1, Mandatory = $true)]
